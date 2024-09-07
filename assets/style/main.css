@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+------------------------------------------ */
+body {
+    font-family: 'Noto Sans JP';
+    line-height: 1.75;
+    color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+/* 部品 ------------------------------------------ */
+/* flexbox */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Outfitフォント */
+.outfit {
+    font-family: poppins;
+    font-weight: 800;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+/*各セクションの左右の余白*/
+section# {
+    padding-right: rem;
+    padding-left: rem;
+    color: #000;
+}
+
+.container {
+    padding-top: rem;
+    padding-bottom: rem;
+}
+
+/*セクションタイトル*/
+.section-title {
+    margin: rem auto rem;
+    font-size: rem;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .section-title {
+        margin: rem auto rem;
+        font-size: rem;
+    }
+}
+
+/* ボタン */
+.button {
+    position: relative;
+    display: block;
+    color: #;
+    text-align: center;
+    border-radius: rem;
+}
+
+/*アイコン 矢印*/
+.button-icon {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    line-height: 1;
+    font-size: 28px;
+    transform: translate(0%, -50%);
+}
+
+@media (min-width: 768px) {
+    .button-icon {
+        top: 50%;
+        right: 5%;
+    }
+}
+
+/* ○色ボタン */
+.button-○ {
+    width: rem;
+    height: rem;
+    padding: rem rem rem;
+    margin: 0 auto;
+    background-color: #;
+    font-size: rem;
+    font-weight: 700;
+}
+
+
+@media (min-width: 768px) {
+    .button-○ {
+        margin: 0 auto;
+        padding: rem rem;
+        width: rem;
+        height: rem;
+        font-weight: 700;
+
+    }
+}
+
+/* ボタン */
+.button {
+    position: relative;
+    display: block;
+    color: #;
+    text-align: center;
+    border-radius: rem;
+}
+
+/*アイコン 矢印*/
+.button-icon {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    line-height: 1;
+    font-size: 28px;
+    transform: translate(0%, -50%);
+}
+
+@media (min-width: 768px) {
+    .button-icon {
+        top: 50%;
+        right: 5%;
+    }
+}
+
+/* ○色ボタン */
+.button-○ {
+    width: rem;
+    height: rem;
+    padding: rem rem rem;
+    margin: 0 auto;
+    background-color: #;
+    font-size: rem;
+    font-weight: 700;
+}
+
+
+@media (min-width: 768px) {
+    .button-○ {
+        margin: 0 auto;
+        padding: rem rem;
+        width: rem;
+        height: rem;
+        font-weight: 700;
+
+    }
+}
+
+.button-○:hover {
+    background-color: #;
+    color: #;
+}
+
+
+/*ヘッダー
+----------------------------------*/
+.header {
+    position: fixed;
+    top: rem;
+    left: rem;
+    right: rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-left: rem;
+    padding-right: rem;
+    border-radius: px;
+    background-color: #;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    width: calc(100% - rem* 2);
+    ;
+    height: rem;
+    text-align: center;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        top: rem;
+        margin: 0 auto;
+        width: calc(100% - rem* 2);
+        padding: 0rem;
+        height: rem;
+        border-radius: 40px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* ロゴ */
+.header-logo img {
+    width: rem;
+    vertical-align: ;
+}
+
+@media (min-width: 768px) {
+    .header-logo img {
+        width: rem;
+        vertical-align: ;
+    }
+}

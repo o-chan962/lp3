@@ -23,10 +23,6 @@
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-        <!--smart Tab-->
-        <link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css" rel="stylesheet">
-        <link href="/assets/style/main.css" rel="stylesheet">
-
         <!-- animate -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
@@ -35,21 +31,216 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
         <link rel="stylesheet" href="/assets/style/main.css">
 
-
-        <!-- Google Fonts -->
-
     </head>
 
     <body>
         <!--ヘッダー-->
         <header class="header">
-            <h1 class="header-logo">
-                <a href="#"><img src=""></a>
+            <h1 class="header__logo">
+                <a href="#"><img src="/assets/image/header_logo.png" alt="KBL"></a>
             </h1>
+            <div class="header__contact">
+                <!--ボタン-->
+                <a href="/contact/" class="button button-pink">お問い合わせ<i class="bi bi-chevron-right"></i></a>
+                <a href="/reservation/" class="button button-green"><span class="button-green__text-1">カウンセリング予約</span><span class="button-green__text-2">(無料)</span><i class="bi bi-chevron-right"></i></a>
+            </div>
         </header>
         <main>
+            <div class="cover">
+                <div class="cover__top">
+                    <div class="cover__main-catch">
+                        <span class="cover__main-catch-course-title">全身脱毛</span>
+                        <span class="cover__main-catch-course-text">（顔・VIO込）</span>
+                    </div>
+                    <div class="cover__sub-catch">
+                        <div class="cover__sub-catch-rimitted-price">
+                            <p class="cover__sub-catch-rimitted">
+                                <span class="cover__sub-catch-rimitted-now">今だけ</span>
+                                <span class="cover__sub-catch-rimitted-first">初月</span>
+                            </p>
+                            <p class="cover__sub-catch-price">
+                                <span class="cover__sub-catch-price-zero">0</span>
+                                <span class="cover__sub-catch-price-yen">円</span>
+                            </p>
+                        </div>
+                        <div class="cover__sub-catch-regular-price">
+                            <span class="cover__sub-catch-regular-price-medium outfit">2,480</span>
+                            <span class="cover__sub-catch-regular-price-small">円／月</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cover__bottom">
+                    <ul class="cover__point">
+                        <li>通い放題</li>
+                        <li>追加料金なし</li>
+                        <li>安心サポート</li>
+                    </ul>
+                </div>
+            </div>
+            <section id="cover-campaign">
+                <p class="cover-campaign__attention">今だけ！</p>
+                <div class="section-item">
+                    <h3 class="section-item__title">フェイシャルコース</h3>
+                    <p class="section-item__text"><span class="cover-campaign__item-text-emphasis">３</span><span class="cover-campaign__item-text-info">回プレゼント！</span></p>
+                </div>
+                <p class="cover-campaign__note">クレンジング/洗顔/フェイスヒーリング/ 整肌</p>
+            </section>
+            <section id="cover-contact">
+                <p class="cover-contact__info">無料体験実施中！</p>
+                <a href="/reservation/" class="button button-green">カウンセリング予約<br>はこちら（無料）<i class="bi bi-chevron-right button-icon"></i></a>
+                <div class="cover-contact__item">
+                    <p class="cover-contact__item-title">無料体験内容</p>
+                    <p class="cover-contact__item-text-1">〈脱毛体験〉V<span class="cover-contact__item-text-inner">(10分)</span>両脇<span class="cover-contact__item-text-inner">(10分)</span></p>
+                    <p class="cover-contact__item-text-2">〈美顔体験〉フェイシャルトリートメント<span class="cover-contact__item-text-inner">(40分コース1回)</span></p>
+                </div>
+            </section>
+            <section id="point">
+                <h2 class="section-title">
+                    <span class="section-title-sub"><img src="/assets/image/point_logo.png" alt="KIRAMEKI BEAUTY LABO">が選ばれる</span><br>
+                    <span class="section-title-main"><img src="/assets/image/section_decolation_left.png" alt="">3つのポイント<img src="/assets/image/section_decolation_right.png" alt=""></span>
+                </h2>
+                <div class="point__section container">
+                    <div class="section-item">
+                        <h3 class="section-item__title">POINT1 ｜ 通い放題</h3>
+                        <p class="section-item__text">納得いくまで何度でも、追加料金なく安心して通っていただけます。</p>
+                        <div class="point__item">
+                            <div class="point__item-left">
+                                <img src="/assets/image/header_logo.png" alt="KBL">
+                                <span class="point__item-left-info">来店1回で全身1回</span>
+                            </div>
+                            <div class="point__item-right">
+                                <p class="point__item-right-name">Aサロン</p>
+                                <span class="point__item-left-info">来店3回で全身1回</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-item">
+                        <h3 class="section-item__title">POINT2 ｜ プランが選べる</h3>
+                        <p class="section-item__text">「全身プラン」と、施術部位を選べる「部分脱毛プラン」から自由にお選びいただけます。</p>
+                        <div class="point__item">
+                            <div class="point__item-plan">
+                                <p class="point__item-plan-title">全身プラン</p>
+                                <img src="/assets/image/course_all_comment.png" alt="">
+                            </div>
+                            <div class="point__item-plan">
+                                <p class="point__item-plan-title">全身プラン</p>
+                                <img src="/assets/image/course_all_comment.png" alt="">
+                            </div>
+                            <div class="point__item-plan">
+                                <p class="point__item-plan-title">部分脱毛プラン</p>
+                                <div class="point__item-plan-top">
+                                    <div class="point__item-plan-parts">
+                                        <img src="/assets/image/course_parts01.png" alt="">
+                                        <span class="point__item-plan-parts-info">うなじ</span>
+                                    </div>
+                                    <div class="point__item-plan-parts">
+                                        <img src="/assets/image/course_parts02.png" alt="">
+                                        <span class="point__item-plan-parts-info">ワキ</span>
+                                    </div>
+                                    <div class="point__item-plan-parts">
+                                        <img src="/assets/image/course_parts03.png" alt="">
+                                        <span class="point__item-plan-parts-info">Oライン</span>
+                                    </div>
+                                </div>
+                                <div class="point__item-plan-bottom">
+                                    <div class="point__item-plan-parts">
+                                        <img src="/assets/image/course_parts04.png" alt="">
+                                        <span class="point__item-plan-parts-info">おでこ</span>
+                                    </div>
+                                    <div class="point__item-plan-parts">
+                                        <img src="/assets/image/course_parts05.png" alt="">
+                                        <span class="point__item-plan-parts-info">あご</span>
+                                    </div>
+                                    <div class="point__item-plan-parts">
+                                        <img src="/assets/image/course_parts06.png" alt="">
+                                        <span class="point__item-plan-parts-info">フェイスライン</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-item">
+                        <h3 class="section-item__title">POINT3 ｜ 安心のサポート</h3>
+                        <p class="section-item__text">提携医療機関のサポートがありますので、ご安心ください。</p>
+                    </div>
+                </div>
+            </section>
+            <div class="contact">
+                <p class="cover-contact__info">無料体験実施中！</p>
+                <a href="/reservation/" class="button button-green">カウンセリング予約<br>はこちら（無料）<i class="bi bi-chevron-right button-icon"></i></a>
+            </div>
+            <section id="course">
+                <h2 class="section-title">
+                    <span class="section-title-sub">ほかにも選べる！</span>
+                    <span class="section-title-main"><img src="/assets/image/section_decolation_left.png" alt="">2つのコース<img src="/assets/image/section_decolation_right.png" alt=""></span>
+                </h2>
+                <div class="course__section container">
+                    <div class="course__section-item">
+                        <div class="section-item">
+                            <h3 class="section-item__title">
+                                ボディコース
+                            </h3>
+                            <p class="section-item__text">
+                                ボディケアのスペシャリストが、お客様のお肌を優しく施術いたします。
+                            </p>
+                        </div>
+                        <div class="section-item">
+                            <h3 class="section-item__title">
+                                フェイシャルコース
+                            </h3>
+                            <p class="section-item-text">
+                                確かな技術を持つエステティシャンが、お客様の理想のお肌に近づけます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="voices">
+                <h2 class="section-title">
+                    <span class="section-title-main"><img src="/assets/image/section_decolation_left.png" alt="">お客様の声<img src="/assets/image/section_decolation_right.png" alt=""></span>
+                </h2>
+                <div class="course__section container">
+                    <div class="voices__slick">
+                        <!--１枚目-->
+                        <div class="voices__slick-item">
+                            <div class="voices__item">
+                                <h3 class="section-item__title">フェイシャルコース</h3>
+                                <img src="/assets/image/voices01.jpg" alt="">
+                                <p class="voices__comment-name">20代 R.Bさま/大学生</p>
+                                <p class="voices__comment-text">ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</p>
+                            </div>
+                        </div>
+                        <!--２枚目-->
+                        <div class="voices__slick-item">
+                            <div class="voices__comment">
+                                <h3 class="section-item__title">脱毛コース</h3>
+                                <img src="/assets/image/voices02.jpg" alt="">
+                                <p class="voices__comment-name">30代 N.Tさま/会社員</p>
+                                <p class="voices__comment-text">納得いくまで何度も、追加料金なく安心して通うことができて大変満足しています。</p>
+                            </div>
+                        </div>
+                        <!--3枚目-->
+                        <div class="voices__slick-item">
+                            <div class="voices__comment">
+                                <h3 class="section-item__title">ボディコース</h3>
+                                <img src="/assets/image/voices03.jpg" alt="">
+                                <p class="voices__comment-name">20代 Y.Kさま/会社員</p>
+                                <p class="voices__comment-text">ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="contact">
+                <p class="cover-contact__info">無料体験実施中！</p>
+                <a href="/reservation/" class="button button-green">カウンセリング予約<br>はこちら（無料）<i class="bi bi-chevron-right"></i></a>
+            </div>
         </main>
-        <footer>
+        <!--フッター-->
+        <footer class="footer">
+            <h1 class="footer__logo">
+                <a href="./" class="footer__logo-link"><img src="/assets/image/footer_logo.png" alt="KBL"></a>
+            </h1>
         </footer>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

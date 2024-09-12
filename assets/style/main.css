@@ -5,11 +5,12 @@
 body {
     font-family: 'Noto Sans JP';
     line-height: 1.75;
-    color: #000;
+    color: #333;
+    text-align: center;
 }
 
 a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -33,58 +34,99 @@ li {
 
 /* Outfitフォント */
 .outfit {
-    font-family: poppins;
-    font-weight: 800;
-}
-
-.medium {
-    font-weight: 500;
+    font-family: outfit;
+    font-weight: 400;
 }
 
 /*各セクションの左右の余白*/
-section# {
-    padding-right: rem;
-    padding-left: rem;
-    color: #000;
+section#course,
+section#point,
+section#cover-campaign,
+section#cover-contact,
+section#voices {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    color: #333;
 }
 
 .container {
-    padding-top: rem;
-    padding-bottom: rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
 }
 
 /*セクションタイトル*/
-.section-title {
-    margin: rem auto rem;
-    font-size: rem;
-    text-align: center;
+.section-title{
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.section-title-main {
+    margin: 0rem auto;
+    font-size: 2rem;
+    justify-content: center;
+    display: inline-flex;
+    color:#fa7da3;
 }
 
 
 @media (min-width: 768px) {
-    .section-title {
-        margin: rem auto rem;
-        font-size: rem;
+    .section-title-main {
+        margin: 0rem auto 0rem;
+        font-size: 2.625rem;
     }
+}
+
+.section-title-sub {
+    margin: 3.125rem auto 0rem;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .section-title-sub {
+        font-size: 1.5rem;
+    }
+}
+
+/*セクション毎 アイテム*/
+.section-item{
+    border-radius: 10px;
+    margin:0 auto;
+    border: 1px solid #fa7da3;
+    width: 100%;
+
+}
+
+.section-item__title{
+    background-color: #fa7da3;
+    border-radius: 10px 10px 0 0;
+    color:#fff;
+    font-size: 1.313rem;
+}
+
+.section-item__text{
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size:0.875rem;
 }
 
 /* ボタン */
 .button {
     position: relative;
     display: block;
-    color: #;
     text-align: center;
-    border-radius: rem;
+    align-content: center;
+    border-radius: 15.5rem;
 }
 
 /*アイコン 矢印*/
 .button-icon {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 6%;
     line-height: 1;
     font-size: 28px;
-    transform: translate(0%, -50%);
 }
 
 @media (min-width: 768px) {
@@ -94,129 +136,384 @@ section# {
     }
 }
 
-/* ○色ボタン */
-.button-○ {
-    width: rem;
-    height: rem;
-    padding: rem rem rem;
+/* green色ボタン */
+.button-green {
+    width: 21.875rem;
+    height: 5rem;
     margin: 0 auto;
-    background-color: #;
-    font-size: rem;
-    font-weight: 700;
-}
-
-
-@media (min-width: 768px) {
-    .button-○ {
-        margin: 0 auto;
-        padding: rem rem;
-        width: rem;
-        height: rem;
-        font-weight: 700;
-
-    }
-}
-
-/* ボタン */
-.button {
-    position: relative;
+    background-color: #49c43d;
+    font-size: 1.313rem;
+    border-radius: 2.5rem;
+    letter-spacing: 1.9px;
+    line-height: 1.4;
     display: block;
-    color: #;
-    text-align: center;
-    border-radius: rem;
 }
 
-/*アイコン 矢印*/
-.button-icon {
-    position: absolute;
-    top: 50%;
-    right: 6%;
-    line-height: 1;
-    font-size: 28px;
-    transform: translate(0%, -50%);
-}
-
-@media (min-width: 768px) {
-    .button-icon {
-        top: 50%;
-        right: 5%;
-    }
-}
-
-/* ○色ボタン */
-.button-○ {
-    width: rem;
-    height: rem;
-    padding: rem rem rem;
-    margin: 0 auto;
-    background-color: #;
-    font-size: rem;
-    font-weight: 700;
-}
 
 
 @media (min-width: 768px) {
-    .button-○ {
+    .button-green {
         margin: 0 auto;
-        padding: rem rem;
-        width: rem;
-        height: rem;
-        font-weight: 700;
+        width: 35.625rem;
+        height: 8.125rem;
+        font-size: 2.125rem;
 
     }
 }
 
-.button-○:hover {
-    background-color: #;
-    color: #;
+.button-green:hover {
+    background-color: #40e02f;
 }
+
+
 
 
 /*ヘッダー
 ----------------------------------*/
 .header {
-    position: fixed;
-    top: rem;
-    left: rem;
-    right: rem;
-    z-index: 1;
     display: flex;
-    justify-content: space-between;
-    padding-left: rem;
-    padding-right: rem;
-    border-radius: px;
-    background-color: #;
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-    width: calc(100% - rem* 2);
-    ;
-    height: rem;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    right:0rem;
+    z-index: 10;
+    justify-content: center;
+    column-gap:3%;
+    background-color: #fff;
+    height: 3.75rem;
     text-align: center;
     margin: auto;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
     .header {
         display: flex;
-        top: rem;
         margin: 0 auto;
-        width: calc(100% - rem* 2);
-        padding: 0rem;
-        height: rem;
-        border-radius: 40px;
+        height: 5.875rem;
         justify-content: space-between;
         align-items: center;
     }
 }
 
 /* ロゴ */
-.header-logo img {
-    width: rem;
-    vertical-align: ;
+.header__logo img {
+    width: 4.5rem;
+    vertical-align: sub;
 }
 
 @media (min-width: 768px) {
-    .header-logo img {
-        width: rem;
-        vertical-align: ;
+    .header__logo  img{
+        width: 6.125rem;
     }
 }
+
+
+/* ヘッダー pink色ボタン */
+.button-pink {
+    max-width: 6.688rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-color: #fa7da3;
+    font-size: 0.75rem;
+}
+
+
+@media (min-width: 768px) {
+    .button-pink {
+        margin: 0 auto;
+        width: 11.813rem;
+        max-width: unset;
+        height: 3.125rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* ヘッダー green色ボタン */
+.header .button-green {
+    max-width: 10.875rem;
+    height: 2rem;
+    margin: 0 auto;
+    font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .header .button-green {
+        margin: 0 auto;
+        width: 18.438rem;
+        max-width: unset;
+        height: 3.125rem;
+        font-size: 1.25rem;
+
+    }
+}
+
+.header__contact{
+    display: flex;
+}
+
+/*cover部分
+---------------------------------*/
+.cover{
+    margin-top:3.75rem;
+    background-color: #fa7da3;
+    background-image: url("/assets/image/mainvisual_sp.png");
+    background-position: center center;
+    background-size: cover;
+    min-height:19.6rem;
+    color:#fff;
+}
+
+.cover__top{
+    position: relative;
+    display: flex;
+}
+
+.cover__main-catch {
+    position:absolute;
+    display: grid;
+    top:0%;
+    left:3%;
+}
+
+span.cover__main-catch-course-text {
+    font-size: 1.125rem;
+}
+
+span.cover__main-catch-course-title {
+    font-size: 2.625rem;
+}
+
+.cover__sub-catch {
+    position: absolute;
+    top: 0%;
+    left: 46%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.302;
+    box-shadow: 3.536px 3.536px 0px 0px rgba(0, 0, 0, 0.25);
+    width: 188px;
+    height: 107px;
+}
+
+.cover__sub-catch-rimitted-price {
+    z-index: 2;
+
+}
+
+p.cover__main-catch-rimitted{
+    z-index: 5;
+}
+
+span.cover__sub-catch-rimitted-now {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 2369px;
+    top: 85px;
+    width: 47px;
+    height: 23px;
+}
+
+
+.cover__bottom{
+    position: absolute;
+    top: 25%;
+    left: 66%;
+    display: flex;
+}
+
+ul.cover__point {
+    display: inline-grid;
+    row-gap: 10%;
+}
+
+.cover__point li {
+    border: 1px solid #fff;
+}
+
+/*cover-campaign部分
+---------------------------------*/
+section#cover-campaign{
+    display: block;
+    background-color: #fffedd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.cover-campaign__attention{
+    display: block;
+    color:#fa7da3;
+    font-size:1.25rem;
+    margin-bottom:0.75rem;
+}
+
+.cover-campaign__attention::before,
+.cover-campaign__attention::after{
+    content: "";
+    width: 47px;
+    height: 23px;
+    margin: 7px 0px 6px;
+    color:#fa7da3;
+}
+
+
+@media(min-width:980px){
+    .cover-campaign__attention::before,
+    .cover-campaign__attention::after{
+    margin: 0px 10px 0px;
+    height: 3px;
+    }
+}
+
+.cover-campaign__attention::before{
+transform: rotate(60deg);
+}
+
+.cover-campaign__attention::after{
+    transform: rotate(-60deg);
+}
+
+section#cover-campaign .section-item__title{
+    font-size: 1.313rem;
+    line-height:1.4;
+}
+
+section#cover-campaign .section-item__text{
+    font-size: 1.688rem;
+    line-height:1.4;
+    color:#fa7da3
+}
+
+span.cover-campaign__item-text-emphasis {
+    font-size: 2.625rem;
+    color:#fa7da3
+
+}
+
+p.cover-campaign__note {
+    font-size: 0.625rem;
+    margin-top: 0.5rem;
+}
+
+/*cover-contact部分
+---------------------------------*/
+section#cover-contact{
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+}
+
+p.cover-contact__info {
+    font-size: 1.313rem;
+    color:#fa7da3;
+    margin-bottom: 0.3rem;
+}
+
+p.cover-contact__item-title {
+    color: #50bfff;
+    font-size: 1.1rem;
+    /* border-top: 1rem; */
+    border-top: solid 1px #50bfff;
+    border-bottom: solid 1px #50bfff;
+    margin-top: 1.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 2.2;
+}
+
+.cover-contact__item-text-1{
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+
+    text-align: left;
+}
+
+.cover-contact__item-text-2{
+    letter-spacing: -0.1px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+
+span.cover-contact__item-text-inner{
+    font-size: 0.688rem;
+}
+
+
+/*point部分
+---------------------------------*/
+section#point{
+    padding-top:1.4rem;
+    background-color: #fdf0f5;
+}
+
+
+.section-title-sub img{
+    width: 12.5rem;
+}
+
+.section-title-main img{
+    width: 2.6rem;
+}
+
+section#point .container{
+    padding-top:0.4rem;
+}
+
+ection#point .section-item__title {
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding-top: 0.5rem;
+}
+
+section#point .section-item__text {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.875rem;
+    padding: 0.8rem 1.3rem;
+    letter-spacing: -0.7px;
+    line-height: 1.5;
+    text-align: left;
+}
+.point__item-left {
+    border: 1px solid #fa7da3;
+    width: 143px;
+    height: 85px;
+    align-content: center;
+    text-align: center;
+    display: block;
+    padding-top:0.7rem;
+}
+
+.point__item {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.point__item-right {
+    border: 1px solid #666;
+    background-color: #fdf0f5;
+    width: 143px;
+    height: 85px;
+}
+
+span.point__item-left-info {
+    display: inline-block;
+}
+
+/*course部分
+---------------------------------*/
+
+/*voices部分
+---------------------------------*/
+
+/*footer部分
+---------------------------------*/
+
+
+

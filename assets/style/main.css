@@ -42,8 +42,7 @@ li {
 section#course,
 section#point,
 section#cover-campaign,
-section#cover-contact,
-section#voices {
+section#cover-contact {
     padding-right: 1.25rem;
     padding-left: 1.25rem;
     color: #333;
@@ -65,6 +64,7 @@ section#voices {
     margin: 0rem auto;
     font-size: 2rem;
     justify-content: center;
+    column-gap: 0.5rem;
     display: inline-flex;
     color:#fa7da3;
 }
@@ -105,10 +105,20 @@ section#voices {
     font-size: 1.313rem;
 }
 
-.section-item__text{
+.section-item__content{
     background-color: #fff;
     border-radius: 0 0 10px 10px;
     font-size:0.875rem;
+    padding: 0.8rem 1.3rem;
+}
+
+.section-item__content-text {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.875rem;
+    letter-spacing: -0.7px;
+    line-height: 1.5;
+    text-align: left;
 }
 
 /* ボタン */
@@ -138,8 +148,8 @@ section#voices {
 
 /* green色ボタン */
 .button-green {
-    width: 21.875rem;
-    height: 5rem;
+    max-width: 21.875rem;
+    min-height:5rem;
     margin: 0 auto;
     background-color: #49c43d;
     font-size: 1.313rem;
@@ -154,9 +164,12 @@ section#voices {
 @media (min-width: 768px) {
     .button-green {
         margin: 0 auto;
-        width: 35.625rem;
+        max-width: 35.625rem;
         height: 8.125rem;
-        font-size: 2.125rem;
+        min-height: unset;
+        font-size: 1.875rem;
+        font-weight: 200;
+        border-radius: 65.05px;
 
     }
 }
@@ -176,7 +189,7 @@ section#voices {
     top: 0rem;
     left: 0rem;
     right:0rem;
-    z-index: 10;
+    z-index: 1;
     justify-content: center;
     column-gap:3%;
     background-color: #fff;
@@ -192,12 +205,20 @@ section#voices {
         display: flex;
         margin: 0 auto;
         height: 5.875rem;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        max-width:90rem;
+        width:100%;
     }
 }
 
 /* ロゴ */
+@media (min-width: 768px) {
+    .header__logo {
+        margin-left: 14.3%;
+    }
+}
+
 .header__logo img {
     width: 4.5rem;
     vertical-align: sub;
@@ -223,7 +244,7 @@ section#voices {
 @media (min-width: 768px) {
     .button-pink {
         margin: 0 auto;
-        width: 11.813rem;
+        width: 11.875rem;
         max-width: unset;
         height: 3.125rem;
         font-size: 1.25rem;
@@ -234,23 +255,25 @@ section#voices {
 .header .button-green {
     max-width: 10.875rem;
     height: 2rem;
+    min-height:unset;
     margin: 0 auto;
     font-size: 0.75rem;
 }
 
 @media (min-width: 768px) {
     .header .button-green {
-        margin: 0 auto;
-        width: 18.438rem;
+        width: 18.5rem;
         max-width: unset;
         height: 3.125rem;
         font-size: 1.25rem;
+        margin-left:5.3%;
 
     }
 }
 
 .header__contact{
     display: flex;
+    margin-left:26.6%;
 }
 
 /*cover部分
@@ -264,71 +287,128 @@ section#voices {
     min-height:19.6rem;
     color:#fff;
 }
+@media (min-width: 768px) {
+    .cover{
+        margin-top:5.875rem;
+        background-image: url("/assets/image/mainvisual_pc.png");
+        min-height: 38.1rem;
+    }
+}
+
 
 .cover__top{
-    position: relative;
     display: flex;
+    justify-content: space-between;
 }
 
-.cover__main-catch {
-    position:absolute;
+@media (min-width: 768px) {
+    .cover__top{
+        display: flex;
+        justify-content: center;
+        max-width:64.375rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+.cover__top-main-catch {
     display: grid;
-    top:0%;
-    left:3%;
+    font-weight: 200;
+
 }
 
-span.cover__main-catch-course-text {
-    font-size: 1.125rem;
-}
-
-span.cover__main-catch-course-title {
+span.cover__top-main-catch-course-title {
     font-size: 2.625rem;
 }
 
-.cover__sub-catch {
-    position: absolute;
-    top: 0%;
-    left: 46%;
+@media (min-width: 768px) {
+    span.cover__top-main-catch-course-title {
+        font-size: 7.634rem;
+    }
+}
+
+span.cover__top-main-catch-course-text {
+    font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+    span.cover__top-main-catch-course-text {
+        font-size: 2.25rem;
+    }
+}
+
+
+.cover__top-sub-catch {
     display: flex;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.302;
+    max-width: 11.7rem;
     box-shadow: 3.536px 3.536px 0px 0px rgba(0, 0, 0, 0.25);
-    width: 188px;
-    height: 107px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fca4bf;
 }
 
-.cover__sub-catch-rimitted-price {
-    z-index: 2;
+@media (min-width: 768px) {
+    .cover__top-sub-catch {
+        max-width: 27.125rem;
+    }
+}
+
+p.cover__top-sub-catch-rimitted{
+    display: grid;
 
 }
 
-p.cover__main-catch-rimitted{
-    z-index: 5;
+span.cover__top-sub-catch-rimitted-first {
+    display: inline-block;
+    font-size: 1.5rem;
 }
 
-span.cover__sub-catch-rimitted-now {
+span.cover__top-sub-catch-rimitted-now {
     background-color: rgb(255, 255, 255);
-    position: absolute;
-    left: 2369px;
-    top: 85px;
-    width: 47px;
-    height: 23px;
+    font-size: 0.813rem;
+    display: inline-block;
+    color: #fa7da3;
+}
+
+span.cover__top-sub-catch-rimitted-first {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+span.cover__top-sub-catch-price-zero {
+    display: inline-block;
+    font-size: 4.75rem;
+}
+
+span.cover__top-sub-catch-price-yen {
+    display: inline-block;
+    font-size:2.25rem;
+}
+
+p.cover__top-sub-catch-price {
+    display: inline-flex;
+    align-items: baseline;
+    color: #fffd7a;
+}
+
+.cover__middle{
+    text-align: right;
 }
 
 
 .cover__bottom{
-    position: absolute;
-    top: 25%;
-    left: 66%;
-    display: flex;
+    text-align: right;
+    margin-right: 7%;
 }
 
-ul.cover__point {
+ul.cover__bottom-point {
     display: inline-grid;
     row-gap: 10%;
+    text-align: center;
 }
 
-.cover__point li {
+.cover__bottom-point li {
     border: 1px solid #fff;
 }
 
@@ -376,6 +456,12 @@ transform: rotate(60deg);
     transform: rotate(-60deg);
 }
 
+@media(min-width:980px){
+    section#cover-campaign .section-item{
+    max-width:34.5rem;
+    }
+}
+
 section#cover-campaign .section-item__title{
     font-size: 1.313rem;
     line-height:1.4;
@@ -384,7 +470,9 @@ section#cover-campaign .section-item__title{
 section#cover-campaign .section-item__text{
     font-size: 1.688rem;
     line-height:1.4;
-    color:#fa7da3
+    color:#fa7da3;
+    background-color: #fff;
+
 }
 
 span.cover-campaign__item-text-emphasis {
@@ -461,24 +549,44 @@ section#point{
 
 section#point .container{
     padding-top:0.4rem;
+    padding-bottom: 0.7rem;
 }
 
-ection#point .section-item__title {
+section#point .section-item__title {
     padding-bottom: 0.5rem;
     font-size: 1.1rem;
     font-weight: 300;
     padding-top: 0.5rem;
 }
 
-section#point .section-item__text {
+
+.point-section-1 .section-item__content-text {
     background-color: #fff;
     border-radius: 0 0 10px 10px;
     font-size: 0.875rem;
-    padding: 0.8rem 1.3rem;
     letter-spacing: -0.7px;
     line-height: 1.5;
     text-align: left;
 }
+
+.point-section-1,
+.point-section-2,
+.point-section-3{
+    border-radius: 10px;
+    margin:0 auto 2.1rem;
+    border: 1px solid #fa7da3;
+    width: 100%;
+}
+
+.point-section-1 .point__item {
+    display: flex;
+    column-gap: 1.2rem;
+    justify-content: center;
+    margin-top:0.8rem;
+    margin-bottom: 0.1rem;
+}
+
+
 .point__item-left {
     border: 1px solid #fa7da3;
     width: 143px;
@@ -486,34 +594,195 @@ section#point .section-item__text {
     align-content: center;
     text-align: center;
     display: block;
-    padding-top:0.7rem;
 }
 
-.point__item {
-    display: flex;
-    column-gap: 1rem;
-    justify-content: center;
-}
 
 .point__item-right {
     border: 1px solid #666;
     background-color: #fdf0f5;
     width: 143px;
     height: 85px;
+    align-content: center;
+    color: #433e3f;
+    font-size: 1.125rem;
 }
 
 span.point__item-left-info {
     display: inline-block;
 }
 
+
+.point-section-2 .section-item__content-text {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: -0.1px;
+}
+
+.point-section-2 .point__item {
+    display: block;
+    margin-top:0.8rem;
+    margin-bottom: 0.1rem;
+}
+
+p.point__item-plan-title {
+    color: #4d2c1c;
+    font-size: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.point__item-plan-1 img {
+    width: 100%;
+    min-height: 22rem;
+}
+
+.point__item-plan-2{
+    margin-top:2rem;
+}
+
+point__item-plan-parts {
+    display: block;
+}
+
+.point__item-plan-top {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.738rem;
+}
+
+.point__item-plan-parts img {
+    max-width: unset;
+    height: auto;
+    display: inline-block
+    ;
+}
+
+.point__item-plan-parts-info {
+    font-size:0.875rem;
+    color: #fa7da3;
+    line-height: 1.3;
+}
+
+.point__item-plan-bottom {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.738rem;
+    margin-top: 1rem;
+}
+
+.point-section-3 .section-item__content-text{
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: -0.1px;
+
+}
+
+.point-section-3{
+    margin-bottom:1.1rem;
+}
+
+.point-section-3 .section-item__content{
+    padding:0.8rem 1.3rem 1rem;
+}
+
+
+/*contact部分
+---------------------------------*/
+.contact {
+    padding-top: 1.5rem;
+    padding-bottom: 2.625rem;
+}
+
 /*course部分
 ---------------------------------*/
+section#course {
+    padding-top: 2.2rem;
+}
 
+.course__section.container {
+    padding-top: 0.4rem;
+}
+
+.course__section img{
+    margin-top:0.6rem;
+}
+
+.course__section .section-item{
+    margin-bottom:1.9rem;
+}
+
+.course__section p.section-item__content-text {
+    line-height: 1.8;
+    letter-spacing: 0px;
+}
+
+.course__section .section-item__content {
+    padding: 1rem 1.3rem;
+}
 /*voices部分
 ---------------------------------*/
+section#voices{
+    color: #333;
+    background-color: #fdf0f5;
+}
+
+.voices__section.container {
+    padding-top: 0rem;
+}
+
+.voices__section h3.section-item__title {
+    padding-bottom: 0.6rem;
+}
+
+.voices__section .section-item{
+    max-width:19.375rem;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.voices__section .section-item__content{
+    display: flex;
+}
+
+.voices__section .section-item__content-text{
+    display: block;
+
+}
+
+
+span.voices__comment-name{
+    color: #fa7da3;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+span.voices__comment-text{
+    text-align: left;
+    font-size: 0.825rem;
+    display: inline-block;
+
+}
+
+
+
+.slick-list {
+    overflow: visible;
+}
+
 
 /*footer部分
 ---------------------------------*/
+.footer{
+    background-color: #fa7da3;
+}
 
-
-
+.footer__logo img{
+    display: inline-block;
+    margin:0.75rem auto;
+}

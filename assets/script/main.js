@@ -1,9 +1,6 @@
 //カルーセル
 $('.voices__slick').slick({
     dots:true,
-    arrows: true,
-    prevArrow: ".arrow-circle--prev",
-    nextArrow: ".arrow-circle--next",
     centerMode: true,
     centerPadding:"30px",
     slidesToShow: 3,// 一度に表示するスライド数

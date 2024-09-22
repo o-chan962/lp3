@@ -36,13 +36,15 @@
     <body>
         <!--ヘッダー-->
         <header class="header">
-            <h1 class="header__logo">
-                <a href="#"><img src="/assets/image/header_logo.png" alt="KBL"></a>
-            </h1>
-            <div class="header__contact">
-                <!--ボタン-->
-                <a href="/contact/" class="button button-pink">お問い合わせ<i class="bi bi-chevron-right"></i></a>
-                <a href="/reservation/" class="button button-green"><span class="button-green__text-1">カウンセリング予約</span><span class="button-green__text-2">(無料)</span><i class="bi bi-chevron-right"></i></a>
+            <div class="header__container">
+                <h1 class="header__logo">
+                    <a href="#"><img src="/assets/image/header_logo.png" alt="KBL"></a>
+                </h1>
+                <div class="header__contact">
+                    <!--ボタン-->
+                    <a href="/contact/" class="button button-pink">お問い合わせ<i class="bi bi-chevron-right"></i></a>
+                    <a href="/reservation/" class="button button-green"><span class="button-green__text-1">カウンセリング予約</span><span class="button-green__text-2">(無料)</span><i class="bi bi-chevron-right"></i></a>
+                </div>
             </div>
         </header>
         <main>
@@ -83,7 +85,7 @@
                 <p class="cover-campaign__attention">今だけ！</p>
                 <div class="section-item">
                     <h3 class="section-item__title">フェイシャルコース</h3>
-                    <p class="section-item__text"><span class="cover-campaign__item-text-emphasis">３</span><span class="cover-campaign__item-text-info">回プレゼント！</span></p>
+                    <p class="section-item__content-text"><span class="cover-campaign__item-text-emphasis">3</span><span class="cover-campaign__item-text-info">回プレゼント！</span></p>
                 </div>
                 <p class="cover-campaign__note">クレンジング/洗顔/フェイスヒーリング/ 整肌</p>
             </section>
@@ -92,13 +94,13 @@
                 <a href="/reservation/" class="button button-green">カウンセリング予約<br>はこちら（無料）<i class="bi bi-chevron-right button-icon"></i></a>
                 <div class="cover-contact__item">
                     <p class="cover-contact__item-title">無料体験内容</p>
-                    <p class="cover-contact__item-text-1">〈脱毛体験〉V<span class="cover-contact__item-text-inner">(10分)</span>両脇<span class="cover-contact__item-text-inner">(10分)</span></p>
+                    <p class="cover-contact__item-text-1">〈脱毛体験〉V<span class="cover-contact__item-text-inner">(10分)or</span>両脇<span class="cover-contact__item-text-inner">(10分)</span></p>
                     <p class="cover-contact__item-text-2">〈美顔体験〉フェイシャルトリートメント<span class="cover-contact__item-text-inner">(40分コース1回)</span></p>
                 </div>
             </section>
             <section id="point">
                 <h2 class="section-title">
-                    <span class="section-title-sub"><img src="/assets/image/point_logo.png" alt="KIRAMEKI BEAUTY LABO">が選ばれる</span><br>
+                    <span class="section-title-sub"><img src="/assets/image/point_sub-title.png" alt="KIRAMEKI BEAUTY LABO">が選ばれる</span><br>
                     <span class="section-title-main"><img src="/assets/image/section_decolation_left.png" alt="">3つのポイント<img src="/assets/image/section_decolation_right.png" alt=""></span>
                 </h2>
                 <div class="point__section container">
@@ -109,7 +111,7 @@
                             <div class="point__item">
                                 <div class="point__item-box">
                                     <div class="point__item-left">
-                                        <img src="/assets/image/header_logo.png" alt="KBL">
+                                        <img src="/assets/image/point_logo.png" alt="KBL">
                                     </div>
                                     <span class="point__item-left-info">来店1回で全身1回</span>
                                 </div>
@@ -129,36 +131,41 @@
                             <div class="point__item">
                                 <div class="point__item-plan-1">
                                     <p class="point__item-plan-title">全身プラン</p>
-                                    <img src="/assets/image/course_all.png" alt="">
+                                    <picture>
+                                        <source media="(min-width:768px)" srcset="/assets/image/course_all_comment_pc.png">
+                                        <img src="/assets/image/course_all_comment_sp.png" alt="">
+                                    </picture>
                                 </div>
                                 <div class="point__item-plan-2">
                                     <p class="point__item-plan-title">部分脱毛プラン</p>
-                                    <div class="point__item-plan-top">
-                                        <div class="point__item-plan-parts">
-                                            <img src="/assets/image/course_parts01.png" alt="">
-                                            <p class="point__item-plan-parts-info">うなじ</p>
+                                    <div class="point__item-plan-content">
+                                        <div class="point__item-plan-top">
+                                            <div class="point__item-plan-parts">
+                                                <img src="/assets/image/course_parts01.png" alt="">
+                                                <p class="point__item-plan-parts-info">うなじ</p>
+                                            </div>
+                                            <div class="point__item-plan-parts">
+                                                <img src="/assets/image/course_parts02.png" alt="">
+                                                <p class="point__item-plan-parts-info">ワキ</p>
+                                            </div>
+                                            <div class="point__item-plan-parts">
+                                                <img src="/assets/image/course_parts03.png" alt="">
+                                                <p class="point__item-plan-parts-info">Oライン</p>
+                                            </div>
                                         </div>
-                                        <div class="point__item-plan-parts">
-                                            <img src="/assets/image/course_parts02.png" alt="">
-                                            <p class="point__item-plan-parts-info">ワキ</p>
-                                        </div>
-                                        <div class="point__item-plan-parts">
-                                            <img src="/assets/image/course_parts03.png" alt="">
-                                            <p class="point__item-plan-parts-info">Oライン</p>
-                                        </div>
-                                    </div>
-                                    <div class="point__item-plan-bottom">
-                                        <div class="point__item-plan-parts">
-                                            <img src="/assets/image/course_parts04.png" alt="">
-                                            <p class="point__item-plan-parts-info">おでこ</p>
-                                        </div>
-                                        <div class="point__item-plan-parts">
-                                            <img src="/assets/image/course_parts05.png" alt="">
-                                            <p class="point__item-plan-parts-info">あご</p>
-                                        </div>
-                                        <div class="point__item-plan-parts">
-                                            <img src="/assets/image/course_parts06.png" alt="">
-                                            <p class="point__item-plan-parts-info">フェイスライン</p>
+                                        <div class="point__item-plan-bottom">
+                                            <div class="point__item-plan-parts">
+                                                <img src="/assets/image/course_parts04.png" alt="">
+                                                <p class="point__item-plan-parts-info">おでこ</p>
+                                            </div>
+                                            <div class="point__item-plan-parts">
+                                                <img src="/assets/image/course_parts05.png" alt="">
+                                                <p class="point__item-plan-parts-info">あご</p>
+                                            </div>
+                                            <div class="point__item-plan-parts">
+                                                <img src="/assets/image/course_parts06.png" alt="">
+                                                <p class="point__item-plan-parts-info">フェイスライン</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +186,7 @@
             </div>
             <section id="course">
                 <h2 class="section-title">
-                    <span class="section-title-sub">ほかにも選べる！</span>
+                    <span class="section-title-sub">ほかにも選べる！</span><br>
                     <span class="section-title-main"><img src="/assets/image/section_decolation_left.png" alt="">2つのコース<img src="/assets/image/section_decolation_right.png" alt=""></span>
                 </h2>
                 <div class="course__section container">
@@ -201,7 +208,7 @@
                             </h3>
                             <div class="section-item__content">
                                 <p class="section-item__content-text">
-                                    確かな技術を持つエステティシャンが、お客様の理想のお肌に近づけます。
+                                    確かな技術を持つエステティシャンが<br>、お客様の理想のお肌に近づけます。
                                 </p>
                                 <img src="/assets/image/course_02.jpg" alt="">
                             </div>
@@ -221,7 +228,7 @@
                                 <h3 class="section-item__title">フェイシャルコース</h3>
                                 <div class="section-item__content">
                                     <img src="/assets/image/voices01.jpg" alt="">
-                                    <p class="section-item__content-text">
+                                    <p class="section-item__content-text-1">
                                         <span class="voices__comment-name">20代 R.Bさま/大学生</span>
                                         <span class="voices__comment-text">ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</span>
                                     </p>
@@ -234,7 +241,7 @@
                                 <h3 class="section-item__title">脱毛コース</h3>
                                 <div class="section-item__content">
                                     <img src="/assets/image/voices02.jpg" alt="">
-                                    <p class="section-item__content-text">
+                                    <p class="section-item__content-text-2">
                                         <span class="voices__comment-name">30代 N.Tさま/会社員</span>
                                         <span class="voices__comment-text">納得いくまで何度も、追加料金なく安心して通うことができて大変満足しています。</span>
                                     </p>
@@ -247,7 +254,7 @@
                                 <h3 class="section-item__title">ボディコース</h3>
                                 <div class="section-item__content">
                                     <img src="/assets/image/voices03.jpg" alt="">
-                                    <p class="section-item__content-text">
+                                    <p class="section-item__content-text-3">
                                         <span class="voices__comment-name">20代 Y.Kさま/会社員</span>
                                         <span class="voices__comment-text">ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。ここにコピーが入ります。</span>
                                     </p>
@@ -257,16 +264,14 @@
                     </div>
                 </div>
             </section>
-            <div class="contact">
+            <div class="last-contact">
                 <p class="cover-contact__info">無料体験実施中！</p>
                 <a href="/reservation/" class="button button-green">カウンセリング予約<br>はこちら（無料）<i class="bi bi-chevron-right"></i></a>
             </div>
         </main>
         <!--フッター-->
         <footer class="footer">
-            <h1 class="footer__logo">
-                <a href="./" class="footer__logo-link"><img src="/assets/image/footer_logo.png" alt="KBL"></a>
-            </h1>
+            <a href="./" class="footer__logo"><img src="/assets/image/footer_logo.png" alt="KBL"></a>
         </footer>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
